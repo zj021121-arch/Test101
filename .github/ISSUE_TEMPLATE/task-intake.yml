@@ -1,0 +1,45 @@
+name: Task Intake
+description: Create a scoped task with readiness details for the project-board workflow.
+title: "[Task] "
+labels: ["task", "todo"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Task summary
+      description: What should be done?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Define explicit pass/fail checks.
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Required inputs
+      description: Links/assets/specs needed before moving to In Progress.
+      placeholder: "URLs, docs, images, API refs..."
+    validations:
+      required: true
+  - type: textarea
+    id: blockers
+    attributes:
+      label: Known blockers
+      description: Dependencies or approvals needed.
+    validations:
+      required: false
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Readiness gate
+      options:
+        - label: Scope and acceptance criteria are complete
+          required: true
+        - label: Required links/assets are attached
+          required: true
+        - label: Environment assumptions confirmed with human owner
+          required: true
