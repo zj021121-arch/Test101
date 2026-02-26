@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Project Board Playbook
+    url: https://github.com/zj021121-arch/Test101/blob/main/docs/project-board-playbook.md
+    about: Workflow rules for To Do readiness, review loops, and status transitions.
