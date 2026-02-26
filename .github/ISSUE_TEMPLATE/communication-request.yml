@@ -1,0 +1,28 @@
+name: Communication Request
+description: Capture clarifications, feedback processing, or announcements.
+title: "[Comm] "
+labels: ["communication"]
+body:
+  - type: dropdown
+    id: channel
+    attributes:
+      label: Communication type
+      options:
+        - Clarification
+        - Review Feedback
+        - Announcement
+    validations:
+      required: true
+  - type: textarea
+    id: message
+    attributes:
+      label: Message or request
+    validations:
+      required: true
+  - type: textarea
+    id: expected_response
+    attributes:
+      label: Expected human response
+      description: What decision or information is needed?
+    validations:
+      required: false
